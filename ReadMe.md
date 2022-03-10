@@ -8,6 +8,15 @@ module consists of a hoverboard wheel driven by a JY-01 500W brushless motor dri
 
 - ./Firmware/stupid-robot-module
     - main folder for arduino firmware. configuration for the functions already implemented can be done via config.h. 
+    - modules
+        - bigServo - l298d motor driver and incremental encoder. runs a position controll pid loop. homing doesn't work well, but after that it's fine.
+        - comms - serial communication using a string of bytes. in this instance;
+        
+                [error, desiredAngle, wheelSetpoint, wheelDirection, wheelMode]
+
+        - safety - a facility to check stops and do error checking
+        - ucontrol - facility to setup the microcontroller timer. Currently stops the PWM signals being in the audible range.
+        - wheel - controls the wheel via a JY-01 brushless motor driver with feedback. Position control and velocity control modes are implemented.
 
 - ./Hardware
     - STLs and other drawings of the prototype. Have a look, but you are encouraged to roll your own.
