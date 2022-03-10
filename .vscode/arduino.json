@@ -1,0 +1,7 @@
+{
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano",
+    "programmer": "arduino:arduinoisp",
+    "sketch": "stupid-robot-module.ino",
+    "port": "COM6"
+}
